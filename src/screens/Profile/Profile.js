@@ -38,6 +38,8 @@ export function Profile({ navigation }) {
       <Button title="Asyne" onPress={() => navigation.navigate('Asyne')} />
       <Button title="Asyobj" onPress={() => navigation.navigate('Asyobj')} />
       <Button title="Image" onPress={() => navigation.navigate('Image')} />
+      <Button title="Clockt" onPress={() => navigation.navigate('Clockt')} />
+      <Button title="Clockpratice" onPress={() => navigation.navigate('Clockpratice')} />
     </View>
   );
 }

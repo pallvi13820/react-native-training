@@ -17,4 +17,7 @@ export const NAVIGATION = {
   Asyobj : 'Asyobj',
   Asyobjv : 'Asyobjv',
   Image : 'Image',
+  Clockt : 'Clockt',
+  Clockpratice : 'Clockpratice',
+  
 };

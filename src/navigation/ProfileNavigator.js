@@ -17,6 +17,9 @@ import Storage from '@/screens/Storage/Storage';
 import Asyobj from '@/screens/Asyobj/Asyobj';
 import Asyobjv from '@/screens/Asyobjv/Asyobjv';
 import ImageCustom from '@/screens/Image/Image';
+import Clockt from '@/screens/Clockt/Clockt';
+import Clockpratice from '@/screens/Clockpractice/Clockpratice';
+
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -101,6 +104,17 @@ export function ProfileNavigator() {
         component={ImageCustom}
         options={{ headerShown: false }}
       />
+       <Stack.Screen
+        name={NAVIGATION.Clockt}
+        component={Clockt}
+        options={{ headerShown: false }}
+      />
+       <Stack.Screen
+        name={NAVIGATION.Clockpratice}
+        component={Clockpratice}
+        options={{ headerShown: false }}
+      />
+      
     </Stack.Navigator>
   );
 }
