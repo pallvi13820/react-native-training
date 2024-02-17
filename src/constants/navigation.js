@@ -19,5 +19,6 @@ export const NAVIGATION = {
   Image : 'Image',
   Clockt : 'Clockt',
   Clockpratice : 'Clockpratice',
-  
+  Firstrd : 'Firstrd',
+  Second : 'Second',
 };

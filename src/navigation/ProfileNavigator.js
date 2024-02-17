@@ -19,6 +19,8 @@ import Asyobjv from '@/screens/Asyobjv/Asyobjv';
 import ImageCustom from '@/screens/Image/Image';
 import Clockt from '@/screens/Clockt/Clockt';
 import Clockpratice from '@/screens/Clockpractice/Clockpratice';
+import Firstrd from '@/screens/Firstrd/Firstrd';
+import Second from '@/screens/second/Second';
 
 
 const Stack = createNativeStackNavigator();
@@ -112,6 +114,16 @@ export function ProfileNavigator() {
        <Stack.Screen
         name={NAVIGATION.Clockpratice}
         component={Clockpratice}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={NAVIGATION.Firstrd}
+        component={Firstrd}
+        options={{ headerShown: false }}
+      />
+        <Stack.Screen
+        name={NAVIGATION.Second}
+        component={Second}
         options={{ headerShown: false }}
       />
       
