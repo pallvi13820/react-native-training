@@ -35,18 +35,19 @@
 
 // FirstrdReducer.js
 
-// FirstrdReducer.js
-// FirstrdReducer.js
-
 const initialState = {
   dataList: [],
 };
-
 const firstReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_DATA':
       return {
-        ...state, dataList: action.payload,
+       // ...state, dataList:action.payload,
+        ...state,
+        dataList: [
+          ...state.dataList,
+          action.payload,
+        ],
       };
     default:
       return state;

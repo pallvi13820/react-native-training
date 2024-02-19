@@ -84,9 +84,9 @@ const Firstrd = ({ navigation }) => {
   const dispatch = useDispatch();
   const data = useSelector(state => state?.firstReducer?.dataList);
   const [text, setText] = useState('');
-
+   
   const handleAddData = () => {
-    dispatch(addData(text));
+     dispatch(addData(text));
     setText('');
   };
 
@@ -110,32 +110,29 @@ const Firstrd = ({ navigation }) => {
       <FlatList
         data={data}
         renderItem={({ item }) => {
-          return (
-            <View
+        return (
+          <View
+            style={{
+              backgroundColor: 'pink',
+              marginHorizontal: 20,
+              marginVertical: 10,
+              borderRadius: 10,
+            }}
+          >
+            <Text
               style={{
-                backgroundColor: 'pink',
-                marginHorizontal: 20,
-                marginVertical: 10,
-                borderRadius: 10,
+                color: 'black',
+                fontWeight: 'bold',
+                fontSize: 15,
+                padding: 5,
+                left: 5,
+                resizeMode: 'contain',
               }}
             >
-              <Text
-                style={{
-                  color: 'black',
-                  fontWeight: 'bold',
-                  fontSize: 15,
-                  padding: 5,
-                  left: 5,
-                  resizeMode: 'contain',
-                }}
-              >
-                {item}
+              {item}
               </Text>
-            </View>
-          )
-        }}
-
-
+          </View>
+     )}}
       />
     </View>
   );
