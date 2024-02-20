@@ -83,6 +83,7 @@ import { useDispatch, useSelector } from 'react-redux';
 const Firstrd = ({ navigation }) => {
   const dispatch = useDispatch();
   const data = useSelector(state => state?.firstReducer?.dataList);
+  console.log('data', data)
   const [text, setText] = useState('');
    
   const handleAddData = () => {

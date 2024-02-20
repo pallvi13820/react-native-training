@@ -41,7 +41,7 @@ export function Profile({ navigation }) {
       <Button title="Clockt" onPress={() => navigation.navigate('Clockt')} />
       <Button title="Clockpratice" onPress={() => navigation.navigate('Clockpratice')} />
       <Button title="Firstrd" onPress={() => navigation.navigate('Firstrd')} />
-
+      <Button title="reduxapi" onPress={() => navigation.navigate('reduxapi')} />
     </View>
   );
 }

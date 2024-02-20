@@ -1,40 +1,34 @@
-import { CurrentRenderContext } from '@react-navigation/native';
-import React, { useEffect, useState } from 'react';
-import {
-  View,
-  Text,
-  Button,
-  FlatList,
-  Image,
-  ActivityIndicator,
-  TouchableOpacity,
-} from 'react-native';
+import { deleteItem, setData } from '@/actions/firstaction';
+import React, { useEffect } from 'react';
+import { View, Text, FlatList, Image, ActivityIndicator, TouchableOpacity, StyleSheet } from 'react-native';
+import { useSelector, useDispatch } from 'react-redux';
 
-const Count = ({ navigation }) => {
-  const [data, setdata] = useState([]);
-  const [loader, setloader] = useState(false);
+const ReduxApi = () => {
+  const datainredux = useSelector(state => state.firstReducer.apidata);
+  console.log('datainredux', datainredux);
+  const loader = useSelector(state => state.firstReducer.loader);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     Apicall();
   }, []);
 
   const Apicall = () => {
-    setloader(true);
+    dispatch({ type: 'SET_LOADER', payload: true });
     fetch('https://reqres.in/api/users?page=2')
       .then(response => response.json())
       .then(res => {
-        setdata(res?.data);
-        setloader(false);
+        dispatch(setData(res?.data));
+        dispatch({ type: 'SET_LOADER', payload: false });
       })
       .catch(error => {
         console.error(error);
-        setloader(false);
+        dispatch({ type: 'SET_LOADER', payload: false });
       });
   };
 
-  const deleteItem = itemId => {
-    const updatedData = data.filter(item => item.id !== itemId);
-    setdata(updatedData);
+  const handleDeleteItem = (itemId) => {
+    dispatch(deleteItem(itemId));
   };
 
   return (
@@ -54,8 +48,8 @@ const Count = ({ navigation }) => {
       ) : null}
 
       <FlatList
-        data={data}
-        keyExtractor={({ id }) => id.toString()}
+        data={datainredux}
+
         renderItem={({ item }) => (
           <View
             style={{
@@ -73,19 +67,14 @@ const Count = ({ navigation }) => {
             />
             <View style={{ padding: 20 }}>
               <Text
-                style={{
-                  color: 'black',
-                  fontWeight: 'bold',
-                  fontSize: 16,
-                  resizeMode: 'contain',
-                }}
+                style={styles.textStyle}
               >
                 {item.first_name} {item.last_name}
               </Text>
               <Text style={{ color: 'black' }}>{item.email}</Text>
             </View>
             <TouchableOpacity
-              onPress={() => deleteItem(item.id)}
+              onPress={() => handleDeleteItem(item.id)}
               style={{
                 position: 'absolute',
                 right: 1,
@@ -112,4 +101,16 @@ const Count = ({ navigation }) => {
   );
 };
 
-export default Count;
+export default ReduxApi;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  textStyle: {
+    color: 'black',
+    fontWeight: 'bold',
+    fontSize: 16,
+    resizeMode: 'contain',
+  }
+});

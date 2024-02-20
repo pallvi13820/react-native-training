@@ -21,4 +21,5 @@ export const NAVIGATION = {
   Clockpratice : 'Clockpratice',
   Firstrd : 'Firstrd',
   Second : 'Second',
+  reduxapi : 'reduxapi',
 };

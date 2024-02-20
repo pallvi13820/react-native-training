@@ -21,6 +21,7 @@ import Clockt from '@/screens/Clockt/Clockt';
 import Clockpratice from '@/screens/Clockpractice/Clockpratice';
 import Firstrd from '@/screens/Firstrd/Firstrd';
 import Second from '@/screens/second/Second';
+import reduxapi from '@/screens/reduxapi/reduxapi';
 
 
 const Stack = createNativeStackNavigator();
@@ -124,6 +125,11 @@ export function ProfileNavigator() {
         <Stack.Screen
         name={NAVIGATION.Second}
         component={Second}
+        options={{ headerShown: false }}
+      />
+        <Stack.Screen
+        name={NAVIGATION.reduxapi}
+        component={reduxapi}
         options={{ headerShown: false }}
       />
       

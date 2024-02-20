@@ -1,5 +1,7 @@
 // Firstrd.js
 
+import { DELETE_ITEM, SET_DATA } from "@/actions/firstaction";
+
 // const initialState = {
 //     count: 0,
 //   };
@@ -35,19 +37,46 @@
 
 // FirstrdReducer.js
 
+// const initialState = {
+//   dataList: [],
+// };
+// const firstReducer = (state = initialState, action) => {
+//   switch (action.type) {
+//     case 'ADD_DATA':
+//       return {
+//        // ...state, dataList:action.payload,
+//         ...state,
+//         dataList: [
+//           ...state.dataList,
+//           action.payload,
+//         ],
+//       };
+//     default:
+//       return state;
+//   }
+// };
+
+// export default firstReducer;
+
+
+// firstreducer.js
+
 const initialState = {
-  dataList: [],
+  apidata: [],
+  loader: false, 
 };
+
 const firstReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_DATA':
+    case SET_DATA:
       return {
-       // ...state, dataList:action.payload,
         ...state,
-        dataList: [
-          ...state.dataList,
-          action.payload,
-        ],
+        apidata: action.payload,
+      };
+    case DELETE_ITEM:
+      return {
+        ...state,
+        apidata: state.apidata.filter(item => item.id !== action.payload),
       };
     default:
       return state;
@@ -55,3 +84,4 @@ const firstReducer = (state = initialState, action) => {
 };
 
 export default firstReducer;
+
