@@ -22,7 +22,10 @@ import Clockpratice from '@/screens/Clockpractice/Clockpratice';
 import Firstrd from '@/screens/Firstrd/Firstrd';
 import Second from '@/screens/second/Second';
 import reduxapi from '@/screens/reduxapi/reduxapi';
-
+import Reduxnavigation from '@/screens/reduxnavigation/Reduxnavigation';
+import Reduxhome from '@/screens/reduxhome/Reduxhome';
+import Calculator from '@/screens/Calculator/Calculator';
+import Newcal from '@/screens/Newcal/Newcal';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -132,7 +135,26 @@ export function ProfileNavigator() {
         component={reduxapi}
         options={{ headerShown: false }}
       />
-      
+       <Stack.Screen
+        name={NAVIGATION.Reduxnavigation}
+        component={Reduxnavigation}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={NAVIGATION.Reduxhome}
+        component={Reduxhome}
+        options={{ headerShown: false }}
+      />
+       <Stack.Screen
+        name={NAVIGATION.Calculator}
+        component={Calculator}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={NAVIGATION.Newcal}
+        component={Newcal}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 }

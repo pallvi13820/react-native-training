@@ -10,6 +10,7 @@ import { TabBar, TabBarIndicator } from 'react-native-tab-view';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
 
+
 // const Tab = createBottomTabNavigator();
 const Tab = createMaterialTopTabNavigator();
 
@@ -72,7 +73,6 @@ export function AppNavigator() {
         component={ProfileNavigator}
         options={{ headerShown: true }}
       />
-      
     </Tab.Navigator>
   );
 }

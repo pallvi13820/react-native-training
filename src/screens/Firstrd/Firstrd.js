@@ -26,7 +26,7 @@
 
 
 
-//Firstrd.js
+// //Firstrd.js
 
 // import { setUserData } from '@/actions/firstaction';
 // import React, { useState } from 'react';
@@ -69,7 +69,7 @@
 
 // export default Firstrd;
 
-// Firstrd.js
+// // Firstrd.js
 
 // Firstrd.js
 

@@ -22,4 +22,8 @@ export const NAVIGATION = {
   Firstrd : 'Firstrd',
   Second : 'Second',
   reduxapi : 'reduxapi',
+  Reduxnavigation : 'Reduxnavigation',
+  Reduxhome : 'Reduxhome',
+  Calculator : 'Calculator',
+  Newcal : 'Newcal',
 };

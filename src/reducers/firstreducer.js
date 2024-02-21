@@ -1,6 +1,6 @@
 // Firstrd.js
 
-import { DELETE_ITEM, SET_DATA } from "@/actions/firstaction";
+//import { DELETE_ITEM, SET_DATA } from "@/actions/firstaction";
 
 // const initialState = {
 //     count: 0,
@@ -20,20 +20,20 @@ import { DELETE_ITEM, SET_DATA } from "@/actions/firstaction";
 // export default firstReducer;
 
 
-// const initialState = {
-//     userData: { name: '', password: '' },
-//   };
+const initialState = {
+    userData: { name: '', password: '' },
+  };
 
-//   const firstReducer = (state = initialState, action) => {
-//     switch (action.type) {
-//       case 'SET_USER_DATA':
-//         return { ...state, userData: action.payload };
-//       default:
-//         return state;
-//     }
-//   };
+  const firstReducer = (state = initialState, action) => {
+    switch (action.type) {
+      case 'SET_USER_DATA':
+        return { ...state, userData: action.payload };
+      default:
+        return state;
+    }
+  };
 
-//   export default firstReducer;
+  export default firstReducer;
 
 // FirstrdReducer.js
 
@@ -61,27 +61,27 @@ import { DELETE_ITEM, SET_DATA } from "@/actions/firstaction";
 
 // firstreducer.js
 
-const initialState = {
-  apidata: [],
-  loader: false, 
-};
+// const initialState = {
+//   apidata: [],
+//   loader: false, 
+// };
 
-const firstReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case SET_DATA:
-      return {
-        ...state,
-        apidata: action.payload,
-      };
-    case DELETE_ITEM:
-      return {
-        ...state,
-        apidata: state.apidata.filter(item => item.id !== action.payload),
-      };
-    default:
-      return state;
-  }
-};
+// const firstReducer = (state = initialState, action) => {
+//   switch (action.type) {
+//     case SET_DATA:
+//       return {
+//         ...state,
+//         apidata: action.payload,
+//       };
+//     case DELETE_ITEM:
+//       return {
+//         ...state,
+//         apidata: state.apidata.filter(item => item.id !== action.payload),
+//       };
+//     default:
+//       return state;
+//   }
+// };
 
-export default firstReducer;
+// export default firstReducer;
 
