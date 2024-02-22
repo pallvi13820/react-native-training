@@ -1,10 +1,12 @@
 // Newcal.js
 import React from 'react';
 import {
+  calculate,
   clearInput,
   clearLeft,
   clearRight,
   setLeftOperand,
+  setOperator,
   setRightOperand,
 } from '@/actions/calculatoraction';
 import { useSelector, useDispatch } from 'react-redux';
@@ -21,20 +23,19 @@ import { useState } from 'react';
 const Newcal = () => {
   const dispatch = useDispatch();
   const state = useSelector(state => state?.calculatorreducer);
-  console.warn(state);
+
   const [op, setOp] = useState(false);
   const handlePress = text => {
     console.log('from handlepress', text);
     if (text >= 0 && text <= 9) {
       if (op == false) {
-
         dispatch(setLeftOperand(Number(text)));
       } else {
         dispatch(setRightOperand(Number(text)));
       }
     } else if (text == '*' || text == '+' || text == '-' || text == '/') {
       setOp(true);
-      dispatch(setOp(text));
+      dispatch(setOperator(text));
     } else if (text === '=') {
       setOp(false);
       dispatch(calculate());
@@ -46,17 +47,23 @@ const Newcal = () => {
       else dispatch(clearRight());
     }
   };
+
+console.log('state.leftoperand', state.operator)  
+console.log('op', op)
   return (
     <View style={styles.mainContainer}>
       <ScrollView style={styles.calculationContainer}>
+        <View>
+        <View style={{ flexDirection: 'row-reverse', }}>
+          <Text style={styles.calculatedText}>{state.leftoperand}</Text>
+          <Text style={styles.calculatedText}>{state.operator}</Text>
+          <Text style={styles.calculatedText}>{state.rightoperand}</Text>
+        </View>
         {/* <Text style={styles.calculatedText}>answer</Text> */}
         <Text style={styles.calculatedText}>{state.answer}</Text>
-        {/* <Text style={styles.calculatedText}>Left</Text>
-        <Text style={styles.calculatedText}>{state.leftoperand}</Text>
-        <Text style={styles.calculatedText}>Right</Text>
-        <Text style={styles.calculatedText}>{state.rightoperand}</Text>
-        <Text style={styles.calculatedText}>operator</Text>
+{/* 
         <Text style={styles.calculatedText}>{state.operator}</Text> */}
+        </View>
       </ScrollView>
       <View style={styles.keyContainer}>
         <View style={styles.row}>
