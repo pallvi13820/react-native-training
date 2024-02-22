@@ -26,6 +26,10 @@ import Reduxnavigation from '@/screens/reduxnavigation/Reduxnavigation';
 import Reduxhome from '@/screens/reduxhome/Reduxhome';
 import Calculator from '@/screens/Calculator/Calculator';
 import Newcal from '@/screens/Newcal/Newcal';
+import QrCode from '@/screens/QrCode/QrCode';
+import genrateQr from '@/screens/genrateQr/genrateQr';
+import scanQr from '@/screens/scanQr/scanQr';
+
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -155,6 +159,22 @@ export function ProfileNavigator() {
         component={Newcal}
         options={{ headerShown: false }}
       />
+      <Stack.Screen
+        name={NAVIGATION.QrCode}
+        component={QrCode}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={NAVIGATION.scanQr}
+        component={scanQr}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={NAVIGATION.genrateQr}
+        component={genrateQr}
+        options={{ headerShown: false }}
+      />
+     
     </Stack.Navigator>
   );
 }

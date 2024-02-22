@@ -37,6 +37,9 @@ export function Profile({ navigation }) {
     { key: 'Reduxhome'},
     { key: 'Calculator'},
     { key: 'Newcal'},
+    { key: 'QrCode'},
+    { key: 'scanQr'},
+    { key: 'genrateQr'},
   ];
 
   useEffect(() => {

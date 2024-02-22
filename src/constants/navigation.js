@@ -26,4 +26,7 @@ export const NAVIGATION = {
   Reduxhome : 'Reduxhome',
   Calculator : 'Calculator',
   Newcal : 'Newcal',
+  QrCode : 'QrCode',
+  scanQr : 'scanQr',
+  genrateQr : 'genrateQr',
 };
