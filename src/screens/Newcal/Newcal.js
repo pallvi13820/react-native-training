@@ -23,7 +23,7 @@ import { useState } from 'react';
 const Newcal = () => {
   const dispatch = useDispatch();
   const state = useSelector(state => state?.calculatorreducer);
-
+  // console.warn(state);
   const [op, setOp] = useState(false);
   const handlePress = text => {
     console.log('from handlepress', text);
@@ -47,23 +47,17 @@ const Newcal = () => {
       else dispatch(clearRight());
     }
   };
-
-console.log('state.leftoperand', state.operator)  
-console.log('op', op)
   return (
     <View style={styles.mainContainer}>
       <ScrollView style={styles.calculationContainer}>
-        <View>
-        <View style={{ flexDirection: 'row-reverse', }}>
-          <Text style={styles.calculatedText}>{state.leftoperand}</Text>
+        <View style={{ flexDirection: 'row',alignItems:"flex-end",justifyContent:"flex-end"}}>
+          <Text style={styles.calculatedText}>{state.leftoperand==0?"":state.leftoperand}</Text>
           <Text style={styles.calculatedText}>{state.operator}</Text>
-          <Text style={styles.calculatedText}>{state.rightoperand}</Text>
+          <Text style={styles.calculatedText}>{state.rightoperand==0?"":state.rightoperand}</Text>
         </View>
         {/* <Text style={styles.calculatedText}>answer</Text> */}
         <Text style={styles.calculatedText}>{state.answer}</Text>
-{/* 
-        <Text style={styles.calculatedText}>{state.operator}</Text> */}
-        </View>
+
       </ScrollView>
       <View style={styles.keyContainer}>
         <View style={styles.row}>
