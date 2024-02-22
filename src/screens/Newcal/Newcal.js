@@ -1,18 +1,13 @@
 // Newcal.js
 import React from 'react';
-import { connect } from 'react-redux';
-// import {
-//   updateInput,
-//   clearInput,
-//   deleteLastInput,
-//   calculateResult,
-// } from "./calculatoraction";
 import {
-  updateInput,
   clearInput,
-  deleteLastInput,
-  calculateResult,
+  clearLeft,
+  clearRight,
+  setLeftOperand,
+  setRightOperand,
 } from '@/actions/calculatoraction';
+import { useSelector, useDispatch } from 'react-redux';
 
 import {
   StyleSheet,
@@ -21,66 +16,55 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
+import { useState } from 'react';
 
-const Newcal = ({
-  data,
-  operatorCount,
-  updateInput,
-  clearInput,
-  deleteLastInput,
-  calculateResult,
-}) => {
+const Newcal = () => {
+  const dispatch = useDispatch();
+  const state = useSelector(state => state?.calculatorreducer);
+  console.warn(state);
+  const [op, setOp] = useState(false);
   const handlePress = text => {
+    console.log('from handlepress', text);
     if (text >= 0 && text <= 9) {
-      if (text === 0) {
-        if (data !== '0') {
-          updateInput(data + text);
-        } else {
-          updateInput(text.toString());
-        }
-      } else {
-        if (data === '0') {
-          updateInput(text.toString());
-        } else {
-          updateInput(data + text);
-        }
-      }
-    } else if (text === 'AC') {
-      clearInput();
-    } else if (text === 'D') {
-      deleteLastInput();
-    } else if (text === '*' || text === '/' || text === '-' || text === '+') {
-      if (data === '0') {
-        return;
-      } else if (
-        operatorCount > 0 &&
-        data !== undefined &&
-        (data.charAt(data.length - 1) === '*' ||
-          data.charAt(data.length - 1) === '/' ||
-          data.charAt(data.length - 1) === '-' ||
-          data.charAt(data.length - 1) === '+')
-      ) {
-        updateInput(data.substring(0, data.length - 1) + text);
-        return;
-      }
+      if (op == false) {
 
-      updateInput(data + text);
+        dispatch(setLeftOperand(Number(text)));
+      } else {
+        dispatch(setRightOperand(Number(text)));
+      }
+    } else if (text == '*' || text == '+' || text == '-' || text == '/') {
+      setOp(true);
+      dispatch(setOp(text));
     } else if (text === '=') {
-      calculateResult();
-    } else if (text === '%' && operatorCount === 0 && data !== '0') {
-      updateInput((Number(data) / 100).toString());
+      setOp(false);
+      dispatch(calculate());
+    } else if (text == 'AC') {
+      setOp(false);
+      dispatch(clearInput());
+    } else if (text == 'D') {
+      if (op == false) dispatch(clearLeft());
+      else dispatch(clearRight());
     }
   };
-console.log('data', data)
   return (
     <View style={styles.mainContainer}>
       <ScrollView style={styles.calculationContainer}>
-        <Text style={styles.calculatedText}>{data}</Text>
+        {/* <Text style={styles.calculatedText}>answer</Text> */}
+        <Text style={styles.calculatedText}>{state.answer}</Text>
+        {/* <Text style={styles.calculatedText}>Left</Text>
+        <Text style={styles.calculatedText}>{state.leftoperand}</Text>
+        <Text style={styles.calculatedText}>Right</Text>
+        <Text style={styles.calculatedText}>{state.rightoperand}</Text>
+        <Text style={styles.calculatedText}>operator</Text>
+        <Text style={styles.calculatedText}>{state.operator}</Text> */}
       </ScrollView>
       <View style={styles.keyContainer}>
         <View style={styles.row}>
           <TouchableOpacity
-            onPress={() => handlePress('AC')}
+            onPress={() => {
+              console.log('hello');
+              handlePress('AC');
+            }}
             style={styles.button}
           >
             <Text style={styles.buttonText}>AC</Text>
@@ -106,19 +90,19 @@ console.log('data', data)
         </View>
         <View style={styles.row}>
           <TouchableOpacity
-            onPress={() => handlePress('7')}
+            onPress={() => handlePress(7)}
             style={styles.button}
           >
             <Text style={styles.buttonText}>7</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => handlePress('8')}
+            onPress={() => handlePress(8)}
             style={styles.button}
           >
             <Text style={styles.buttonText}>8</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => handlePress('9')}
+            onPress={() => handlePress(9)}
             style={styles.button}
           >
             <Text style={styles.buttonText}>9</Text>
@@ -132,19 +116,19 @@ console.log('data', data)
         </View>
         <View style={styles.row}>
           <TouchableOpacity
-            onPress={() => handlePress('4')}
+            onPress={() => handlePress(4)}
             style={styles.button}
           >
             <Text style={styles.buttonText}>4</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => handlePress('5')}
+            onPress={() => handlePress(5)}
             style={styles.button}
           >
             <Text style={styles.buttonText}>5</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => handlePress('6')}
+            onPress={() => handlePress(6)}
             style={styles.button}
           >
             <Text style={styles.buttonText}>6</Text>
@@ -158,19 +142,19 @@ console.log('data', data)
         </View>
         <View style={styles.row}>
           <TouchableOpacity
-            onPress={() => handlePress('1')}
+            onPress={() => handlePress(1)}
             style={styles.button}
           >
             <Text style={styles.buttonText}>1</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => handlePress('2')}
+            onPress={() => handlePress(2)}
             style={styles.button}
           >
             <Text style={styles.buttonText}>2</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => handlePress('3')}
+            onPress={() => handlePress(3)}
             style={styles.button}
           >
             <Text style={styles.buttonText}>3</Text>
@@ -184,7 +168,7 @@ console.log('data', data)
         </View>
         <View style={styles.row}>
           <TouchableOpacity
-            onPress={() => handlePress('0')}
+            onPress={() => handlePress(0)}
             style={styles.doubleButton}
           >
             <Text style={styles.buttonText}>0</Text>
@@ -207,26 +191,14 @@ console.log('data', data)
   );
 };
 
-const mapStateToProps = state => ({
-  data: state.data,
-  operatorCount: state.operatorCount,
-});
-
-const mapDispatchToProps = {
-  updateInput,
-  clearInput,
-  deleteLastInput,
-  calculateResult,
-};
-
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
   },
   calculatedText: {
-    fontSize: 60,
+    fontSize: 20,
     textAlign: 'right',
-    marginVertical: 40,
+    marginVertical: 5,
   },
   calculationContainer: {
     padding: 20,
@@ -279,4 +251,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Newcal);
+export default Newcal;

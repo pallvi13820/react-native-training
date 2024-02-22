@@ -14,6 +14,7 @@ export function App() {
       <PersistGate onBeforeLift={hide} persistor={persistor}>
         <RootNavigator />
       </PersistGate>
+     
     </Provider>
   );
 }
