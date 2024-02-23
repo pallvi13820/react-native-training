@@ -29,6 +29,8 @@ import Newcal from '@/screens/Newcal/Newcal';
 import QrCode from '@/screens/QrCode/QrCode';
 import genrateQr from '@/screens/genrateQr/genrateQr';
 import scanQr from '@/screens/scanQr/scanQr';
+import todo from '@/screens/todo/todo';
+import todolist from '@/screens/todolist/todolist';
 
 
 const Stack = createNativeStackNavigator();
@@ -174,7 +176,16 @@ export function ProfileNavigator() {
         component={genrateQr}
         options={{ headerShown: false }}
       />
-     
+      <Stack.Screen
+        name={NAVIGATION.todo}
+        component={todo}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={NAVIGATION.todolist}
+        component={todolist}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 }

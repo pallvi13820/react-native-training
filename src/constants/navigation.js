@@ -29,4 +29,6 @@ export const NAVIGATION = {
   QrCode : 'QrCode',
   scanQr : 'scanQr',
   genrateQr : 'genrateQr',
+  todo : 'todo',
+  todolist : 'todolist'
 };

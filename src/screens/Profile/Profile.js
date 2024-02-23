@@ -40,6 +40,8 @@ export function Profile({ navigation }) {
     { key: 'QrCode'},
     { key: 'scanQr'},
     { key: 'genrateQr'},
+    { key: 'todo'},
+    { key: 'todolist'}
   ];
 
   useEffect(() => {

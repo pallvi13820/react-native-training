@@ -1068,13 +1068,6 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@react-native-async-storage/async-storage@^1.13.4":
-  version "1.22.1"
-  resolved "https://registry.yarnpkg.com/@react-native-async-storage/async-storage/-/async-storage-1.22.1.tgz#0ceeadc21f12bd3b50925a7c13c1cc1c08627535"
-  integrity sha512-kLC0kREjUzXawcNFWrBXD8efBYbQq/F9pchDuUuXf6Wue9dCur9nEkjJYM1Ods81BVisPey1QVDT3qVoOYbqgQ==
-  dependencies:
-    merge-options "^3.0.4"
-
 "@react-native-async-storage/async-storage@^1.21.0":
   version "1.21.0"
   resolved "https://registry.yarnpkg.com/@react-native-async-storage/async-storage/-/async-storage-1.21.0.tgz#d7e370028e228ab84637016ceeb495878b7a44c8"
@@ -6959,7 +6952,7 @@ prompts@^2.0.1, prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.5.10, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.0, prop-types@^15.8.1:
+prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.0, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -7092,13 +7085,6 @@ react-native-bootsplash@^4.3.2:
     picocolors "^1.0.0"
     sharp "^0.32.1"
 
-react-native-camera@^4.2.1:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/react-native-camera/-/react-native-camera-4.2.1.tgz#caf74081f055e89d7e9b0cd5108965d808c60e90"
-  integrity sha512-+Vkql24PFYQfsPRznJCvPwJQfyzCnjlcww/iZ4Ej80bgivKjL9eU0IMQIXp4yi6XCrKi4voWXxIDPMupQZKeIQ==
-  dependencies:
-    prop-types "^15.6.2"
-
 react-native-circular-progress@^1.3.9:
   version "1.3.9"
   resolved "https://registry.yarnpkg.com/react-native-circular-progress/-/react-native-circular-progress-1.3.9.tgz#9552c26d6b2e6bb447a47da201ef2ae9a453e273"
@@ -7172,24 +7158,10 @@ react-native-pager-view@^6.2.3:
   resolved "https://registry.yarnpkg.com/react-native-pager-view/-/react-native-pager-view-6.2.3.tgz#698f6387fdf06cecc3d8d4792604419cb89cb775"
   integrity sha512-dqVpXWFtPNfD3D2QQQr8BP+ullS5MhjRJuF8Z/qml4QTILcrWaW8F5iAxKkQR3Jl0ikcEryG/+SQlNcwlo0Ggg==
 
-react-native-permissions@^2.0.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-2.2.2.tgz#3d2a63f6b7d6be52fc86e30f77412a9566283028"
-  integrity sha512-ihf4shQDSX5Oo9ChQXb9kr13mmyyNem5MaEvOpr3dCjhBOBWyEMztXm9/uPK1Qg5PsNpaYLa1KpcPZDCw87LXg==
-
 react-native-progress-circle@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-native-progress-circle/-/react-native-progress-circle-2.1.0.tgz#62bdf31c76962d10c5c14446b61ff7d05cf0d0ec"
   integrity sha512-VP0s92bgbTMQy4hQzPU4LlGyFj3z5u7i1HYFG8/yzXXfGkX1cxKS4xOlE+OTaObWC99w7Bodi3h8R7En2nQPYw==
-
-react-native-qrcode-scanner@^1.5.5:
-  version "1.5.5"
-  resolved "https://registry.yarnpkg.com/react-native-qrcode-scanner/-/react-native-qrcode-scanner-1.5.5.tgz#0d20101712715da108742a2bbbd0397569031b01"
-  integrity sha512-il79uStkFqUvofqXJQfOL30qgQyU17MUKxj7IGHv6oT2OxIY/vutTwuPPDbsivtv0yTMHP4dGx/79oys4eAuNw==
-  dependencies:
-    "@react-native-async-storage/async-storage" "^1.13.4"
-    prop-types "^15.5.10"
-    react-native-permissions "^2.0.2"
 
 react-native-qrcode-svg@^6.3.0:
   version "6.3.0"
