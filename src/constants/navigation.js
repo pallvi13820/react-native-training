@@ -30,5 +30,6 @@ export const NAVIGATION = {
   scanQr : 'scanQr',
   genrateQr : 'genrateQr',
   todo : 'todo',
-  todolist : 'todolist'
+  todolist : 'todolist',
+  arraymethod : 'arraymethod',
 };

@@ -31,6 +31,7 @@ import genrateQr from '@/screens/genrateQr/genrateQr';
 import scanQr from '@/screens/scanQr/scanQr';
 import todo from '@/screens/todo/todo';
 import todolist from '@/screens/todolist/todolist';
+import arraymethod from '@/screens/arraymethod/arraymethod';
 
 
 const Stack = createNativeStackNavigator();
@@ -184,6 +185,11 @@ export function ProfileNavigator() {
       <Stack.Screen
         name={NAVIGATION.todolist}
         component={todolist}
+        options={{ headerShown: false }}
+      />
+       <Stack.Screen
+        name={NAVIGATION.arraymethod}
+        component={arraymethod}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

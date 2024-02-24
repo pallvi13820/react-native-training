@@ -41,7 +41,8 @@ export function Profile({ navigation }) {
     { key: 'scanQr'},
     { key: 'genrateQr'},
     { key: 'todo'},
-    { key: 'todolist'}
+    { key: 'todolist'},
+    { key: 'arraymethod'}
   ];
 
   useEffect(() => {
@@ -59,7 +60,7 @@ export function Profile({ navigation }) {
   return (
     <View>
       <FlatList
-        data={data}
+        data={data.reverse()}
         renderItem={renderItem}
         keyExtractor={(item) => item.key}
       />
