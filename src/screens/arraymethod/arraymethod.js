@@ -100,10 +100,12 @@ const styles = StyleSheet.create({});
 // console.log('array', array);
 
 //13.array.slice()//not change actual array//used to create a shallow copy
-// let array = [1,2,3,4,5];
+//  let array = [1,2,3,4,5];
 // console.log('array', array);
 // //let partofarray = array.slice(2,4); //(2)2 to end
 // //console.log('partofarray', partofarray)
+// let partofarray = array.slice(-3);
+// console.log('partofarray', partofarray);
 
 //array search
 
@@ -282,7 +284,7 @@ const styles = StyleSheet.create({});
 // let arr = [8,2,3,5,4,6];
 // let sum = arr.reduce((accum , curr)=> {
 //     return accum+curr;  //accumlator//current value
-// },2)
+// })
 // console.log('sum', sum)
 
 // let arr =[8,2,5,5]
@@ -384,3 +386,216 @@ const styles = StyleSheet.create({});
 
 // const year = [...q1, ...q2, ...q3, ...q4];
 // console.log('year', year);
+
+///////////////////////////////////////
+//JavaScript String Methods
+
+//1.String Length
+//The length property returns the length of a string:
+// let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// let length = text.length;
+// console.log('length', length);
+
+//2.String charAt()
+//The charAt() method returns the character at a specified index (position) in a string:
+// let text = "HELLO WORLD";
+// let char = text.charAt(0);
+// console.log('char', char);
+
+//3.String charCodeAt()
+//The charCodeAt() method returns the code of the character at a specified index in a string:
+// let text = "HELLO WORLD";
+// let char = text.charCodeAt(0);
+// console.log('char', char);
+
+//4.String at()
+//Property Access [ ]
+//its count space as well
+// let text = "HELLO WORLD";
+// let char = text[6];
+// console.log('char', char);
+
+//5.String slice()
+//slice() extracts a part of a string and returns the extracted part in a new string.
+//The method takes 2 parameters: start position, and end position (end not included).
+// let text = "Apple, Banana, Kiwi";
+// let part = text.slice(7, 16);
+// console.log('part', part);
+
+//6.String substring()
+//substring() is similar to slice().
+//The difference is that start and end values less than 0 are treated as 0 in substring().
+// let str = "Apple, Banana, Kiwi";
+// let part = str.substring(7, 14);
+// console.log('part', part);
+
+//7.String substr()
+//substr() is similar to slice().
+//The difference is that the second parameter specifies the length of the extracted part.
+// let str = "Apple, Banana, Kiwi";
+// let part = str.substr(7, 6);
+// console.log('part', part);
+
+//8.String toUpperCase()
+//A string is converted to upper case with toUpperCase():
+// let text1 = "Hello World!";
+// let text2 = text1.toUpperCase();
+// console.log('text2', text2);
+
+//9.String toLowerCase()
+//A string is converted to lower case with toLowerCase():
+// let text1 = "HELLO WORLD!";
+// let text2 = text1.toLowerCase();
+// console.log('text2', text2);
+
+//10.String concat()
+//concat() joins two or more strings:
+// let text1 = "Hello";
+// let text2 = "World";
+// let text3 = text1.concat(" ",text2);
+// console.log('text3', text3);
+
+//11.String trim()
+//The trim() method removes whitespace from both sides of a string:
+// let text1 = '      Hello World!      ';
+// let text2 = text1.trim();
+// let text3 = text2;
+// console.log('text2', text2);
+// console.log('text1.length', text1.length);
+// console.log('text2.length', text2.length);
+
+//12.String trimStart()
+//The trimStart() method works like trim(), but removes whitespace only from the start of a string.
+// let text1 = "     Hello World!     hie";
+// let text2 = text1.trimStart();
+// console.log('text2', text2);
+// console.log('text1.length', text1.length);
+// console.log('text2.length', text2.length);
+
+//13.String trimEnd()
+//The trimEnd() method works like trim(), but removes whitespace only from the end of a string.
+// let text1 = "     Hello World!     ";
+// let text2 = text1.trimEnd();
+// console.log('text2', text2);
+// console.log('text1.length', text1.length);
+// console.log('text2.length', text2.length);
+
+//14.String padStart()
+//The padStart() method pads a string from the start.
+//It pads a string with another string (multiple times) until it reaches a given length.
+// let text = "5";
+// let padded = text.padStart(6,"4");
+// console.log('padded', padded);
+
+//15.String padEnd()
+//The padEnd() method pads a string from the end.
+//It pads a string with another string (multiple times) until it reaches a given length.
+// let text = "5";
+// let padded = text.padEnd(8,"0");
+// console.log('padded', padded);
+
+//16.String repeat()
+//The repeat() method returns a string with a number of copies of a string.
+//The repeat() method returns a new string.
+//The repeat() method does not change the original string.
+// let text = "Hello world!";
+// let result = text.repeat(5);
+// console.log('result', result);
+
+//17.Replacing String Content
+//The replace() method replaces a specified value with another value in a string:
+// let text = "Please visit Microsoft!";
+// let newText = text.replace("Microsoft", "W3Schools");
+// console.log('newText', newText);
+
+//18.String ReplaceAll()
+//The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.
+//If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.
+// let text =  "I love cats. Cats are very easy to love. Cats are very popular."
+// text = text.replaceAll("Cats","Dogs");
+// console.log('text', text);
+
+// let text = "I love cats. Cats are very easy to love. Cats are very popular.";
+// text = text.replace(/Cats/g, "Dogs");
+// console.log('text', text);
+
+//19.String split()
+//A string can be converted to an array with the split() method:
+//If the separator is omitted, the returned array will contain the whole string in index [0].
+//If the separator is "", the returned array will be an array of single characters:
+// let text = "Hello";
+// const myArr = text.split(" , ");
+// console.log('myArr',myArr[0]);
+
+//////String Search Methods
+//20.String indexOf()
+//The indexOf() method returns the index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found:
+// let text = " hello where 'locate' how occurs!";
+// let index = text.indexOf("locate");
+// console.log('index', index);
+
+//21.String lastIndexOf()
+//The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+// let text = "Please locate where occurs 'locate'!";
+// let index = text.lastIndexOf("locate");
+// console.log('index', index);
+
+//22.String search()
+//The search() method searches a string for a string (or a regular expression) and returns the position of the match:
+// let text = "Please locate where 'locate' occurs!";
+// let index = text.search("locate");
+// console.log('index', index);
+
+//23.String match()
+//The match() method returns an array containing the results of matching a string against a string (or a regular expression).
+// let text = "The rain in SPAIN stays mainly in the plain";
+// let find = text.match("gybhvbhbh");
+// let element = text.match("ai");
+// console.log('find', find);
+// console.log('element', element);
+
+//24.String matchAll()
+//The matchAll() method returns an iterator containing the results of matching a string against a string (or a regular expression).
+// let text = "I love very cats. Cats are very easy to love. Cats are very popular."
+// const iterator = text.matchAll("Cats");
+// console.log('iterator', Array.from(iterator));
+
+//25.String includes()
+//The includes() method returns true if a string contains a specified value.
+//Otherwise it returns false.
+// let text = "Hello world, welcome to the universe.";
+// let find = text.includes("world");
+// console.log('find', find);
+
+//26.String startsWith()
+//The startsWith() method returns true if a string begins with a specified value.
+//Otherwise it returns false:
+// let text = "Hello world, welcome to the universe.";
+// let first = text.startsWith("Hello");
+// console.log('first', first);
+
+//27.String endsWith()
+//The endsWith() method returns true if a string ends with a specified value.
+//Otherwise it returns false:
+// let text = "John Doe";
+// let last = text.endsWith("Doe");
+// console.log('last', last);
+
+
+
+
+
+
+// //chatgpt gyan
+// const mergedArray = [...new Set(a.concat(b))];
+// utilizes a Set to automatically remove duplicates. A Set is a built-in object in JavaScript that only allows unique values. By converting the concatenated array [...new Set(a.concat(b))] to a Set, duplicate values are automatically removed because a Set can only contain unique elements.
+
+// Here's a breakdown of the process:
+
+// a.concat(b): This concatenates arrays a and b.
+// new Set(a.concat(b)): This converts the concatenated array to a Set, which automatically removes duplicates.
+// [...new Set(a.concat(b))]: This converts the Set back to an array.
+// So, the resulting mergedArray contains unique values from the concatenation of arrays a and b.
+
+
+
