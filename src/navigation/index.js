@@ -10,10 +10,28 @@ import { theme } from '@/theme';
 export function RootNavigator() {
   const user = useSelector(getUser);
   const scheme = useColorScheme();
+  const config = {
+    screens: {
+      ScreenA: 'a',
+      ScreenB: {
+        path: 'b/:message',
+        parse: {
+          message: message => `${message}`,
+        },
+      },
+      ScreenC: 'c',
+    },
+  };
 
   return (
-    <NavigationContainer theme={theme[scheme]}>
-      {<AppNavigator /> }
+    <NavigationContainer
+      theme={theme[scheme]}
+      linking={{
+        prefixes: ['myapp://app'],
+        config,
+      }}
+    >
+      {<AppNavigator />}
       {/* {user ? <AppNavigator /> : <AuthNavigator />} */}
     </NavigationContainer>
   );

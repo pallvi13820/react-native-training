@@ -42,7 +42,12 @@ export function Profile({ navigation }) {
     { key: 'genrateQr'},
     { key: 'todo'},
     { key: 'todolist'},
-    { key: 'arraymethod'}
+    { key: 'arraymethod'},
+    { key: 'ScreenA'},
+    { key: 'ScreenB'},
+    { key: 'ScreenC'},
+    { key: 'LinkingScreen'},
+
   ];
 
   useEffect(() => {

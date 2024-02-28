@@ -32,6 +32,10 @@ import scanQr from '@/screens/scanQr/scanQr';
 import todo from '@/screens/todo/todo';
 import todolist from '@/screens/todolist/todolist';
 import arraymethod from '@/screens/arraymethod/arraymethod';
+import ScreenA from '@/screens/ScreenA';
+import ScreenB from '@/screens/ScreenB';
+import ScreenC from '@/screens/ScreenC';
+import LinkingScreen from '@/screens/LinkingScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -190,6 +194,26 @@ export function ProfileNavigator() {
        <Stack.Screen
         name={NAVIGATION.arraymethod}
         component={arraymethod}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={NAVIGATION.ScreenA}
+        component={ScreenA}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={NAVIGATION.ScreenB}
+        component={ScreenB}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={NAVIGATION.ScreenC}
+        component={ScreenC}
+        options={{ headerShown: false }}
+      />
+       <Stack.Screen
+        name={NAVIGATION.LinkingScreen}
+        component={LinkingScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

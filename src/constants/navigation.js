@@ -32,4 +32,8 @@ export const NAVIGATION = {
   todo : 'todo',
   todolist : 'todolist',
   arraymethod : 'arraymethod',
+  ScreenA : 'ScreenA',
+  ScreenB : 'ScreenB',
+  ScreenC : 'ScreenC',
+  LinkingScreen : 'LinkingScreen',
 };
