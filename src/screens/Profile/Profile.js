@@ -47,6 +47,7 @@ export function Profile({ navigation }) {
     { key: 'ScreenB'},
     { key: 'ScreenC'},
     { key: 'LinkingScreen'},
+    { key: 'calenderPickerApp'},
 
   ];
 

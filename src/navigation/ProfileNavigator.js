@@ -36,6 +36,8 @@ import ScreenA from '@/screens/ScreenA';
 import ScreenB from '@/screens/ScreenB';
 import ScreenC from '@/screens/ScreenC';
 import LinkingScreen from '@/screens/LinkingScreen';
+import calenderPickerApp from '@/screens/calenderPickerApp';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -216,6 +218,12 @@ export function ProfileNavigator() {
         component={LinkingScreen}
         options={{ headerShown: false }}
       />
+       <Stack.Screen
+        name={NAVIGATION.calenderPickerApp}
+        component={calenderPickerApp}
+        options={{ headerShown: false }}
+      />
+      
     </Stack.Navigator>
   );
 }
