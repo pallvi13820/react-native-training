@@ -115,7 +115,7 @@ const CalendarPickerApp = () => {
         <Text style={styles.resultText}>
           {endDate ? `End Date: ${endDate.toDateString()}` : 'Select End Date'}
         </Text>
-        <Text style={styles.finalresultText}>Number of Days: {numberOfDays}</Text>
+        <Text >Number of Days: {numberOfDays}</Text>
       </View>
     </View>
   );
@@ -134,13 +134,9 @@ const styles = StyleSheet.create({
   resultText: {
     fontSize: 25,
     marginVertical: 5,
-    color: 'blue',
+    color: 'pink',
   },
-  finalresultText: {
-    fontSize: 25,
-    marginVertical: 5,
-    color: 'green',
-  }
+  
 });
 
 export default CalendarPickerApp;

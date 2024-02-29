@@ -48,7 +48,7 @@ export function Profile({ navigation }) {
     { key: 'ScreenC'},
     { key: 'LinkingScreen'},
     { key: 'calenderPickerApp'},
-
+    { key: 'customizeCalendar'},
   ];
 
   useEffect(() => {

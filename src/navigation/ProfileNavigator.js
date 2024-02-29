@@ -37,6 +37,7 @@ import ScreenB from '@/screens/ScreenB';
 import ScreenC from '@/screens/ScreenC';
 import LinkingScreen from '@/screens/LinkingScreen';
 import calenderPickerApp from '@/screens/calenderPickerApp';
+import customizeCalendar from '@/screens/customizeCalendar';
 
 
 
@@ -223,7 +224,11 @@ export function ProfileNavigator() {
         component={calenderPickerApp}
         options={{ headerShown: false }}
       />
-      
+      <Stack.Screen
+        name={NAVIGATION.customizeCalendar}
+        component={customizeCalendar}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 }

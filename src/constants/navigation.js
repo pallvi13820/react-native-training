@@ -37,4 +37,5 @@ export const NAVIGATION = {
   ScreenC : 'ScreenC',
   LinkingScreen : 'LinkingScreen',
   calenderPickerApp : 'calenderPickerApp',
+  customizeCalendar : 'customizeCalendar',
 };
