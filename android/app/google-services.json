@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "726749805991",
+    "project_id": "fir-first-e7800",
+    "storage_bucket": "fir-first-e7800.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726749805991:android:f6c0661ea2c1e23f8d0a82",
+        "android_client_info": {
+          "package_name": "com.jobrcustomer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaCuHhvmBf-g-4z5NNrBuleTUizQ90RQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
