@@ -1289,6 +1289,13 @@
     opencollective-postinstall "^2.0.3"
     superstruct "^0.6.2"
 
+"@react-native-firebase/auth@^19.0.1":
+  version "19.0.1"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-19.0.1.tgz#70f0103b41fe407ca120bef224f170c78f1c3584"
+  integrity sha512-7p/AMHm96sCgeERKTGn/PgO/16CUGSeAK3EFVUwr5kVBLfwragDPprUh1x7LaX/irbwbrZwlr2LEHpXNG/4j1g==
+  dependencies:
+    plist "^3.1.0"
+
 "@react-native-masked-view/masked-view@^0.2.7":
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/@react-native-masked-view/masked-view/-/masked-view-0.2.9.tgz#723a7a076d56b8f5f3fda076eaa5b6b82988e854"
@@ -6918,7 +6925,7 @@ pkg-up@^3.1.0:
   dependencies:
     find-up "^3.0.0"
 
-plist@^3.0.2:
+plist@^3.0.2, plist@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/plist/-/plist-3.1.0.tgz#797a516a93e62f5bde55e0b9cc9c967f860893c9"
   integrity sha512-uysumyrvkUX0rX/dEVqt8gC3sTBzd4zoWfLeS29nb53imdaXVvLINYXTI2GNqzaMuvacNx4uJQ8+b3zXR0pkgQ==

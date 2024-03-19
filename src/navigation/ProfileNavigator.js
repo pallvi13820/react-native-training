@@ -38,6 +38,8 @@ import ScreenC from '@/screens/ScreenC';
 import LinkingScreen from '@/screens/LinkingScreen';
 import calenderPickerApp from '@/screens/calenderPickerApp';
 import customizeCalendar from '@/screens/customizeCalendar';
+import EmailPassAuth from '@/screens/EmailPassAuth';
+import phoneOtpAuth from '@/screens/phoneOtpAuth';
 
 
 
@@ -227,6 +229,16 @@ export function ProfileNavigator() {
       <Stack.Screen
         name={NAVIGATION.customizeCalendar}
         component={customizeCalendar}
+        options={{ headerShown: false }}
+      />
+       <Stack.Screen
+        name={NAVIGATION.EmailPassAuth}
+        component={EmailPassAuth}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={NAVIGATION.phoneOtpAuth}
+        component={phoneOtpAuth}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

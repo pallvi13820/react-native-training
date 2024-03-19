@@ -49,6 +49,8 @@ export function Profile({ navigation }) {
     { key: 'LinkingScreen'},
     { key: 'calenderPickerApp'},
     { key: 'customizeCalendar'},
+    { key: 'EmailPassAuth'},
+    { key: 'phoneOtpAuth'},
   ];
 
   useEffect(() => {

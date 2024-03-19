@@ -38,4 +38,6 @@ export const NAVIGATION = {
   LinkingScreen : 'LinkingScreen',
   calenderPickerApp : 'calenderPickerApp',
   customizeCalendar : 'customizeCalendar',
+  EmailPassAuth : 'EmailPassAuth',
+  phoneOtpAuth : 'phoneOtpAuth',
 };
