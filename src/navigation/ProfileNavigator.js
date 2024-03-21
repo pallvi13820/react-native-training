@@ -40,6 +40,12 @@ import calenderPickerApp from '@/screens/calenderPickerApp';
 import customizeCalendar from '@/screens/customizeCalendar';
 import EmailPassAuth from '@/screens/EmailPassAuth';
 import phoneOtpAuth from '@/screens/phoneOtpAuth';
+import yourInformation from '@/screens/yourInformation';
+import rideBooking from '@/screens/rideBooking';
+import Checkout from '@/screens/Checkout';
+import NotificationUi from '@/screens/NotificationUi';
+import ModalUi from '@/screens/ModalUi';
+
 
 
 
@@ -239,6 +245,31 @@ export function ProfileNavigator() {
       <Stack.Screen
         name={NAVIGATION.phoneOtpAuth}
         component={phoneOtpAuth}
+        options={{ headerShown: false }}
+      />
+       <Stack.Screen
+        name={NAVIGATION.yourInformation}
+        component={yourInformation}
+        options={{ headerShown: false }}
+      />
+     <Stack.Screen
+        name={NAVIGATION.rideBooking}
+        component={rideBooking}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={NAVIGATION.Checkout}
+        component={Checkout}
+        options={{ headerShown: false }}
+      />
+       <Stack.Screen
+        name={NAVIGATION.NotificationUi}
+        component={NotificationUi}
+        options={{ headerShown: false }}
+      />
+       <Stack.Screen
+        name={NAVIGATION.ModalUi}
+        component={ModalUi}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

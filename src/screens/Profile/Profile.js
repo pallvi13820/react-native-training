@@ -33,24 +33,29 @@ export function Profile({ navigation }) {
     { key: 'Clockpratice' },
     { key: 'Firstrd' },
     { key: 'reduxapi' },
-    { key: 'Reduxnavigation'},
-    { key: 'Reduxhome'},
-    { key: 'Calculator'},
-    { key: 'Newcal'},
-    { key: 'QrCode'},
-    { key: 'scanQr'},
-    { key: 'genrateQr'},
-    { key: 'todo'},
-    { key: 'todolist'},
-    { key: 'arraymethod'},
-    { key: 'ScreenA'},
-    { key: 'ScreenB'},
-    { key: 'ScreenC'},
-    { key: 'LinkingScreen'},
-    { key: 'calenderPickerApp'},
-    { key: 'customizeCalendar'},
-    { key: 'EmailPassAuth'},
-    { key: 'phoneOtpAuth'},
+    { key: 'Reduxnavigation' },
+    { key: 'Reduxhome' },
+    { key: 'Calculator' },
+    { key: 'Newcal' },
+    { key: 'QrCode' },
+    { key: 'scanQr' },
+    { key: 'genrateQr' },
+    { key: 'todo' },
+    { key: 'todolist' },
+    { key: 'arraymethod' },
+    { key: 'ScreenA' },
+    { key: 'ScreenB' },
+    { key: 'ScreenC' },
+    { key: 'LinkingScreen' },
+    { key: 'calenderPickerApp' },
+    { key: 'customizeCalendar' },
+    { key: 'EmailPassAuth' },
+    { key: 'phoneOtpAuth' },
+    { key: 'yourInformation' },
+    { key: 'rideBooking' },
+    { key: 'Checkout' },
+    { key: 'NotificationUi' },
+    { key: 'ModalUi' },
   ];
 
   useEffect(() => {
@@ -70,7 +75,7 @@ export function Profile({ navigation }) {
       <FlatList
         data={data.reverse()}
         renderItem={renderItem}
-        keyExtractor={(item) => item.key}
+        keyExtractor={item => item.key}
       />
     </View>
   );

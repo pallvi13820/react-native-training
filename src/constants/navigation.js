@@ -40,4 +40,9 @@ export const NAVIGATION = {
   customizeCalendar : 'customizeCalendar',
   EmailPassAuth : 'EmailPassAuth',
   phoneOtpAuth : 'phoneOtpAuth',
+  yourInformation : 'yourInformation',
+  rideBooking : 'rideBooking',
+  Checkout : 'Checkout',
+  NotificationUi : 'NotificationUi',
+  ModalUi : 'ModalUi',
 };

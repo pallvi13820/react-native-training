@@ -6,11 +6,11 @@ import {
   FlatList,
   TouchableOpacity,
   Image,
+  TextInput 
 } from 'react-native';
 import Modal from 'react-native-modal';
 import React, { useState } from 'react';
 import { email } from '@/assets';
-import { TextInput } from 'react-native-gesture-handler';
 
 const Mod = ({ navigation }) => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -169,7 +169,7 @@ const Mod = ({ navigation }) => {
                 fontSize: 20,
               }}
             >
-              {' '}
+   
               back
             </Text>
           </TouchableOpacity>
