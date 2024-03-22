@@ -45,6 +45,8 @@ import rideBooking from '@/screens/rideBooking';
 import Checkout from '@/screens/Checkout';
 import NotificationUi from '@/screens/NotificationUi';
 import ModalUi from '@/screens/ModalUi';
+import { Help } from '@/screens/Help';
+import { SupportChat } from '@/screens/SupportChat';
 
 
 
@@ -270,6 +272,16 @@ export function ProfileNavigator() {
        <Stack.Screen
         name={NAVIGATION.ModalUi}
         component={ModalUi}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={NAVIGATION.Help}
+        component={Help}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={NAVIGATION.SupportChat}
+        component={SupportChat}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

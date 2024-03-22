@@ -56,6 +56,8 @@ export function Profile({ navigation }) {
     { key: 'Checkout' },
     { key: 'NotificationUi' },
     { key: 'ModalUi' },
+    { key: 'Help' },
+    { key: 'SupportChat' },
   ];
 
   useEffect(() => {

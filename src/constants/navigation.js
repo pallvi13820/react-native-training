@@ -45,4 +45,6 @@ export const NAVIGATION = {
   Checkout : 'Checkout',
   NotificationUi : 'NotificationUi',
   ModalUi : 'ModalUi',
+  Help : 'Help',
+  SupportChat : 'SupportChat',
 };
