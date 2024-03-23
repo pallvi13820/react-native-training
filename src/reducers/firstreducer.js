@@ -1,23 +1,23 @@
-// Firstrd.js
+// Firstreducer.js
 
-//import { DELETE_ITEM, SET_DATA } from "@/actions/firstaction";
 
-// const initialState = {
-//     count: 0,
-//   };
+const initialState = {
+  count: 0,
+};
 
-// const firstReducer = (state = 0, action) => {
-//   switch (action.type) {
-//     case 'INCREMENT':
-//       return { ...state, count: state.count + 1 };
-//     case 'DECREMENT':
-//       return { ...state, count: state.count - 1 };
-//     default:
-//       return state;
-//   }
-// };
+const firstReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return { ...state, count: state.count + 1 };
+    case 'DECREMENT':
+      return { ...state, count: state.count - 1 };
+    default:
+      return state;
+  }
+};
 
-// export default firstReducer;
+export default firstReducer;
+
 
 
 // const initialState = {
@@ -37,26 +37,26 @@
 
 // FirstrdReducer.js
 
-const initialState = {
-  dataList: [],
-};
-const firstReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'ADD_DATA':
-      return {
-       // ...state, dataList:action.payload,
-        ...state,
-        dataList: [
-          ...state.dataList,
-          action.payload,
-        ],
-      };
-    default:
-      return state;
-  }
-};
+// const initialState = {
+//   dataList: [],
+// };
+// const firstReducer = (state = initialState, action) => {
+//   switch (action.type) {
+//     case 'ADD_DATA':
+//       return {
+//        // ...state, dataList:action.payload,
+//         ...state,
+//         dataList: [
+//           ...state.dataList,
+//           action.payload,
+//         ],
+//       };
+//     default:
+//       return state;
+//   }
+// };
 
-export default firstReducer;
+// export default firstReducer;
 
 
 // firstreducer.js
