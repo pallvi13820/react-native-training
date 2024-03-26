@@ -19,8 +19,7 @@ const Add = ({ navigation }) => {
     arr.push(text);
     setData(prev => [...prev, text]);
   }
-//abc
-//abc
+
   return (
     <View style={{ flex: 1 }}>
       <Button title="Back" onPress={() => navigation.navigate('Profile')} />
