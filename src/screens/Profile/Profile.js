@@ -58,6 +58,7 @@ export function Profile({ navigation }) {
     { key: 'ModalUi' },
     { key: 'Help' },
     { key: 'SupportChat' },
+    { key: 'PushNotification' },
   ];
 
   useEffect(() => {

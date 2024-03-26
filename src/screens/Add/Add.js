@@ -7,7 +7,6 @@ import {
   useState,
   FlatList,
 } from 'react-native';
-import { CurrentRenderContext } from '@react-navigation/native';
 import React from 'react';
 
 const Add = ({ navigation }) => {

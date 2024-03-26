@@ -47,6 +47,7 @@ import NotificationUi from '@/screens/NotificationUi';
 import ModalUi from '@/screens/ModalUi';
 import { Help } from '@/screens/Help';
 import { SupportChat } from '@/screens/SupportChat';
+import PushNotification from '@/screens/PushNotification';
 
 
 
@@ -282,6 +283,11 @@ export function ProfileNavigator() {
       <Stack.Screen
         name={NAVIGATION.SupportChat}
         component={SupportChat}
+        options={{ headerShown: false }}
+      />
+       <Stack.Screen
+        name={NAVIGATION.PushNotification}
+        component={PushNotification}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

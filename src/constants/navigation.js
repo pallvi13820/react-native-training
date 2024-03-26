@@ -47,4 +47,5 @@ export const NAVIGATION = {
   ModalUi : 'ModalUi',
   Help : 'Help',
   SupportChat : 'SupportChat',
+  PushNotification : 'PushNotification',
 };
