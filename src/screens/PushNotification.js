@@ -1,8 +1,8 @@
-//PushNotification.js
+// PushNotification.js
 import React, { useEffect } from 'react';
 import messaging from '@react-native-firebase/messaging';
-import { Alert } from 'react-native';
 import { AppRegistry } from 'react-native';
+
 const PushNotification = () => {
   useEffect(() => {
     const requestUserPermission = async () => {
@@ -22,12 +22,26 @@ const PushNotification = () => {
       }
     };
 
+    const handleBackgroundMessage = async remoteMessage => {
+      console.log('Handling background message:', remoteMessage);
+      // You can perform additional handling here if needed
+    };
+
     requestUserPermission();
-    const unsubscribe = messaging().onMessage(async remoteMessage => {
-      Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+
+    const unsubscribeForeground = messaging().onMessage(async remoteMessage => {
+      console.log('Foreground message:', remoteMessage);
+      // You can handle foreground messages differently if needed
     });
 
-    return unsubscribe;
+    const unsubscribeBackground = messaging().setBackgroundMessageHandler(
+      handleBackgroundMessage
+    );
+
+    return () => {
+      unsubscribeForeground();
+      unsubscribeBackground();
+    };
   }, []);
 
   return null;
