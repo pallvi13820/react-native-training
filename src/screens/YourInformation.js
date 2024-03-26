@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 import React from 'react';
 
-const yourInformation = () => {
+const YourInformation = () => {
   return (
     <View style={{ flex: 1, backgroundColor: '#FFFF', paddingHorizontal: 20 }}>
       <View
@@ -172,6 +172,7 @@ const yourInformation = () => {
   );
 };
 
-export default yourInformation;
+export default YourInformation;
 
 const styles = StyleSheet.create({});
+

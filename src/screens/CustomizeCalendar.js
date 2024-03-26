@@ -10,7 +10,7 @@ LocaleConfig.locales['en'] = {
 };
 LocaleConfig.defaultLocale = 'en';
 
-const MyCalendar = () => {
+const CustomizeCalendar = () => {
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedImagePath, setSelectedImagePath] = useState(null);
 
@@ -41,4 +41,4 @@ const MyCalendar = () => {
   );
 };
 
-export default MyCalendar;
+export default CustomizeCalendar;

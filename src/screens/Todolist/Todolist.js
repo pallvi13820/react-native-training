@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { useRoute } from '@react-navigation/native';
 
-const todolist = () => {
+const Todolist = () => {
   const route = useRoute();
   return (
     <View>
@@ -11,6 +11,6 @@ const todolist = () => {
   );
 };
 
-export default todolist;
+export default Todolist;
 
 const styles = StyleSheet.create({});

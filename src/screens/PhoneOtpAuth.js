@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, TextInput, Text } from 'react-native';
 import auth from '@react-native-firebase/auth';
 
-export default function PhoneVerification() {
+export default function PhoneOtpAuth() {
   // Set an initializing state whilst Firebase connects
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState(null);

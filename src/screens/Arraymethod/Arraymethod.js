@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 
-const arraymethod = () => {
+const Arraymethod = () => {
   return (
     <View>
       <Text>arraymethod</Text>
@@ -9,7 +9,7 @@ const arraymethod = () => {
   );
 };
 
-export default arraymethod;
+export default Arraymethod;
 
 const styles = StyleSheet.create({});
 

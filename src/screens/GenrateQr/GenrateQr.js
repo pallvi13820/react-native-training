@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, View, TextInput, Button } from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
 
-const genrateQr = () => {
+const GenrateQr = () => {
   const [text, setText] = useState('');
   const [qrCode, setQrCode] = useState('');
 
@@ -49,4 +49,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default genrateQr;
+export default GenrateQr;

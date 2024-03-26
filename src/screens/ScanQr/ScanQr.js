@@ -66,7 +66,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const scanQr = () => {
+const ScanQr = () => {
   return (
     <View>
       <Text>scanQr</Text>
@@ -74,6 +74,6 @@ const scanQr = () => {
   )
 }
 
-export default scanQr
+export default ScanQr
 
 const styles = StyleSheet.create({})

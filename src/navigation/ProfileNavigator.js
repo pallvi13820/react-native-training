@@ -21,36 +21,33 @@ import Clockt from '@/screens/Clockt/Clockt';
 import Clockpratice from '@/screens/Clockpractice/Clockpratice';
 import Firstrd from '@/screens/Firstrd/Firstrd';
 import Second from '@/screens/second/Second';
-import reduxapi from '@/screens/reduxapi/reduxapi';
 import Reduxnavigation from '@/screens/reduxnavigation/Reduxnavigation';
 import Reduxhome from '@/screens/reduxhome/Reduxhome';
 import Calculator from '@/screens/Calculator/Calculator';
 import Newcal from '@/screens/Newcal/Newcal';
 import QrCode from '@/screens/QrCode/QrCode';
-import genrateQr from '@/screens/genrateQr/genrateQr';
-import scanQr from '@/screens/scanQr/scanQr';
-import todo from '@/screens/todo/todo';
-import todolist from '@/screens/todolist/todolist';
-import arraymethod from '@/screens/arraymethod/arraymethod';
 import ScreenA from '@/screens/ScreenA';
 import ScreenB from '@/screens/ScreenB';
 import ScreenC from '@/screens/ScreenC';
 import LinkingScreen from '@/screens/LinkingScreen';
-import calenderPickerApp from '@/screens/calenderPickerApp';
-import customizeCalendar from '@/screens/customizeCalendar';
 import EmailPassAuth from '@/screens/EmailPassAuth';
-import phoneOtpAuth from '@/screens/phoneOtpAuth';
-import yourInformation from '@/screens/yourInformation';
-import rideBooking from '@/screens/rideBooking';
 import Checkout from '@/screens/Checkout';
 import NotificationUi from '@/screens/NotificationUi';
 import ModalUi from '@/screens/ModalUi';
 import { Help } from '@/screens/Help';
 import { SupportChat } from '@/screens/SupportChat';
 import PushNotification from '@/screens/PushNotification';
-
-
-
+import RideBooking from '@/screens/RideBooking';
+import YourInformation from '@/screens/YourInformation';
+import PhoneOtpAuth from '@/screens/PhoneOtpAuth';
+import CustomizeCalendar from '@/screens/CustomizeCalendar';
+import CalendarPickerApp from '@/screens/CalenderPickerApp';
+import Arraymethod from '@/screens/Arraymethod/Arraymethod';
+import ScanQr from '@/screens/ScanQr/ScanQr';
+import GenrateQr from '@/screens/GenrateQr/GenrateQr';
+import Todo from '@/screens/Todo/Todo';
+import Todolist from '@/screens/Todolist/Todolist';
+import ReduxApi from '@/screens/Reduxapi/Reduxapi';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -107,25 +104,27 @@ export function ProfileNavigator() {
         options={{ headerShown: false }}
       />
 
-      {<Stack.Screen
-        name={NAVIGATION.Asyne}
-        component={Asyne}
-        options={{ headerShown: false }}
-      /> }
+      {
+        <Stack.Screen
+          name={NAVIGATION.Asyne}
+          component={Asyne}
+          options={{ headerShown: false }}
+        />
+      }
 
-<Stack.Screen
+      <Stack.Screen
         name={NAVIGATION.Storage}
         component={Storage}
         options={{ headerShown: false }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name={NAVIGATION.Asyobj}
         component={Asyobj}
         options={{ headerShown: false }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name={NAVIGATION.Asyobjv}
         component={Asyobjv}
         options={{ headerShown: false }}
@@ -135,12 +134,12 @@ export function ProfileNavigator() {
         component={ImageCustom}
         options={{ headerShown: false }}
       />
-       <Stack.Screen
+      <Stack.Screen
         name={NAVIGATION.Clockt}
         component={Clockt}
         options={{ headerShown: false }}
       />
-       <Stack.Screen
+      <Stack.Screen
         name={NAVIGATION.Clockpratice}
         component={Clockpratice}
         options={{ headerShown: false }}
@@ -150,17 +149,17 @@ export function ProfileNavigator() {
         component={Firstrd}
         options={{ headerShown: false }}
       />
-        <Stack.Screen
+      <Stack.Screen
         name={NAVIGATION.Second}
         component={Second}
         options={{ headerShown: false }}
       />
-        <Stack.Screen
-        name={NAVIGATION.reduxapi}
-        component={reduxapi}
+      <Stack.Screen
+        name={NAVIGATION.ReduxApi}
+        component={ReduxApi}
         options={{ headerShown: false }}
       />
-       <Stack.Screen
+      <Stack.Screen
         name={NAVIGATION.Reduxnavigation}
         component={Reduxnavigation}
         options={{ headerShown: false }}
@@ -170,7 +169,7 @@ export function ProfileNavigator() {
         component={Reduxhome}
         options={{ headerShown: false }}
       />
-       <Stack.Screen
+      <Stack.Screen
         name={NAVIGATION.Calculator}
         component={Calculator}
         options={{ headerShown: false }}
@@ -186,28 +185,28 @@ export function ProfileNavigator() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name={NAVIGATION.scanQr}
-        component={scanQr}
+        name={NAVIGATION.ScanQr}
+        component={ScanQr}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name={NAVIGATION.genrateQr}
-        component={genrateQr}
+        name={NAVIGATION.GenrateQr}
+        component={GenrateQr}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name={NAVIGATION.todo}
-        component={todo}
+        name={NAVIGATION.Todo}
+        component={Todo}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name={NAVIGATION.todolist}
-        component={todolist}
+        name={NAVIGATION.Todolist}
+        component={Todolist}
         options={{ headerShown: false }}
       />
-       <Stack.Screen
-        name={NAVIGATION.arraymethod}
-        component={arraymethod}
+      <Stack.Screen
+        name={NAVIGATION.Arraymethod}
+        component={Arraymethod}
         options={{ headerShown: false }}
       />
       <Stack.Screen
@@ -225,39 +224,40 @@ export function ProfileNavigator() {
         component={ScreenC}
         options={{ headerShown: false }}
       />
-       <Stack.Screen
+      <Stack.Screen
         name={NAVIGATION.LinkingScreen}
         component={LinkingScreen}
         options={{ headerShown: false }}
       />
-       <Stack.Screen
-        name={NAVIGATION.calenderPickerApp}
-        component={calenderPickerApp}
+      <Stack.Screen
+        name={NAVIGATION.CalendarPickerApp}
+        component={CalendarPickerApp}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name={NAVIGATION.customizeCalendar}
-        component={customizeCalendar}
+        name={NAVIGATION.CustomizeCalendar}
+        component={CustomizeCalendar}
         options={{ headerShown: false }}
       />
-       <Stack.Screen
+      <Stack.Screen
         name={NAVIGATION.EmailPassAuth}
         component={EmailPassAuth}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name={NAVIGATION.phoneOtpAuth}
-        component={phoneOtpAuth}
+        name={NAVIGATION.PhoneOtpAuth}
+        component={PhoneOtpAuth}
         options={{ headerShown: false }}
       />
-       <Stack.Screen
-        name={NAVIGATION.yourInformation}
-        component={yourInformation}
+
+      <Stack.Screen
+        name={NAVIGATION.YourInformation}
+        component={YourInformation}
         options={{ headerShown: false }}
       />
-     <Stack.Screen
-        name={NAVIGATION.rideBooking}
-        component={rideBooking}
+      <Stack.Screen
+        name={NAVIGATION.RideBooking}
+        component={RideBooking}
         options={{ headerShown: false }}
       />
       <Stack.Screen
@@ -265,12 +265,12 @@ export function ProfileNavigator() {
         component={Checkout}
         options={{ headerShown: false }}
       />
-       <Stack.Screen
+      <Stack.Screen
         name={NAVIGATION.NotificationUi}
         component={NotificationUi}
         options={{ headerShown: false }}
       />
-       <Stack.Screen
+      <Stack.Screen
         name={NAVIGATION.ModalUi}
         component={ModalUi}
         options={{ headerShown: false }}
@@ -285,7 +285,7 @@ export function ProfileNavigator() {
         component={SupportChat}
         options={{ headerShown: false }}
       />
-       <Stack.Screen
+      <Stack.Screen
         name={NAVIGATION.PushNotification}
         component={PushNotification}
         options={{ headerShown: false }}

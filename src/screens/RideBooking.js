@@ -13,7 +13,7 @@ import { bottomarrow, countryadd, emailaddress, num, smile } from '@/assets';
 import CountryPicker from 'react-native-country-picker-modal';
 import RidebookingCompo from './RidebookingCompo';
 
-const rideBooking = ({ navigation }) => {
+const RideBooking = ({ navigation }) => {
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
 
@@ -255,7 +255,7 @@ const rideBooking = ({ navigation }) => {
   );
 };
 
-export default rideBooking;
+export default RideBooking;
 
 const styles = StyleSheet.create({
   container: {
@@ -301,3 +301,5 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
 });
+
+
