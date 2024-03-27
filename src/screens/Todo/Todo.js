@@ -35,7 +35,7 @@ const Todo = ({ navigation }) => {
           <View style={styles.todoView}>
             <View style={styles.todoList}>
               <TouchableOpacity
-                onPress={() => navigation.navigate('todolist', { item })}
+                onPress={() => navigation.navigate('Todolist', { item })}
               >
                 <Text numberOfLines={1}>{item.text}</Text>
               </TouchableOpacity>
